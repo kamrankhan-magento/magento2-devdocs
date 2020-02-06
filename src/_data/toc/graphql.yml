@@ -5,6 +5,9 @@ pages:
     - label: Overview
       url: /graphql/index.html
 
+    - label: Customer Storefront API project
+      url: /graphql/develop/customer-storefront.html
+
     - label: Implementation
       children:
         - label: GraphQL requests
