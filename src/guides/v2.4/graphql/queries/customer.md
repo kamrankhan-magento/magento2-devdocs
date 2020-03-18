@@ -269,7 +269,7 @@ The following query returns the customer's wish list:
 
 The `customer` object can contain the following attributes:
 
-{% include graphql/customer-output.md %}
+{% include graphql/customer-output-24.md %}
 
 ### Wishlist attributes {#Wishlist}
 
