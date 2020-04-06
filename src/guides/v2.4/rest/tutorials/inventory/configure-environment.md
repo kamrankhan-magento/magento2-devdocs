@@ -46,7 +46,7 @@ In this tutorial, we'll create the infrastructure needed to implement a US and a
 
    Field | Value
    --- | ---
-   Store | US Store
+   Store | North America Store
    Name | US Store View
    Code | `us`
    Status | Enabled
@@ -102,9 +102,26 @@ For this tutorial, we'll assume that payment and shipping methods are configured
 
 {% include webapi/tutorials/set-payment-methods.md %}
 
-### Configure supported shipping methods (optional) {#ship-method}
+### Configure supported shipping methods and enable in-store delivery {#ship-method}
 
-{% include webapi/tutorials/configure-shipping-methods.md %}
+If an order contains one or more simple, configurable, bundle, or group products, then the customer must either specify a shipping method or select a location from which to pick up the order.
+
+Downloadable and virtual products cannot be shipped, and Magento does not calculate shipping charges for these items.
+
+Since we are not actually shipping any products in this tutorial, we do not need to set up an account with a shipping company such as UPS or Federal Express. Instead, we can use the offline shipping methods that are configured by default.
+
+Delivery method | Configuration name | Enabled by default?
+--- | --- | ---
+Flat rate | `flatrate` | Yes
+Table rate | `tablerate` | Yes
+Free shipping | `freeshipping` | No
+In-store delivery | Not applicable | No
+
+To change which offline delivery methods are available:
+
+1. Select **Stores** > Settings > **Configuration** > **Sales** > **Delivery Methods** in Admin.
+1. Enable in-store delivery and adjust the status of the other delivery methods as desired.
+1. Click **Save Config**.
 
 ## Reindex and flush the cache
 
