@@ -5,7 +5,7 @@ redirect_from:
   - /guides/v2.3/graphql/reference/customer.html
 ---
 
-The `customer` query returns information about the logged-in customer and store credit history.
+The `customer` query returns information about the logged-in customer, store credit history and customer's wishlist.
 
 To return or modify information about a customer, Magento recommends you use customer tokens in the header of your GraphQL calls. However, you also can use [session authentication]({{ page.baseurl }}/get-started/authentication/gs-authentication-session.html).
 
