@@ -215,7 +215,6 @@ exclude:
   - page-builder
   - cloud
   - codelinks
-  - common
   - community
   - compliance
   - extensions
