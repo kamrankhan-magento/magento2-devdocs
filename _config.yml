@@ -207,19 +207,19 @@ githuburl22: https://github.com/magento/devdocs/tree/master/src/guides/v2.2/
 gdeurl23: /guides/v2.3/
 githuburl23: https://github.com/magento/devdocs/tree/master/src/guides/v2.3/
 
-exclude:
-  - guides/v2.3
-  - guides/m1x
-  - mftf
-  - mbi
-  - page-builder
-  - cloud
-  - codelinks
-  - community
-  - compliance
-  - extensions
-  - marketplace
-  - recommendations
-  - redoc
-  - release
-  - swagger
+# exclude:
+#   - guides/v2.3
+#   - guides/m1x
+#   - mftf
+#   - mbi
+#   - page-builder
+#   - cloud
+#   - codelinks
+#   - community
+#   - compliance
+#   - extensions
+#   - marketplace
+#   - recommendations
+#   - redoc
+#   - release
+#   - swagger
