@@ -213,3 +213,14 @@ exclude:
   - mftf
   - mbi
   - page-builder
+  - cloud
+  - codelinks
+  - common
+  - community
+  - compliance
+  - extensions
+  - marketplace
+  - recommendations
+  - redoc
+  - release
+  - swagger

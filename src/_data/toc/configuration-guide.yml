@@ -427,10 +427,7 @@ pages:
           url: /config-guide/prod/development-environment.html
           
     - label: GDPR compliance
-      include_versions: ["2.1", "2.2", "2.3"]
-      children:
-        - label: Magento 2.x
-          url:  /architecture/gdpr/magento-2x.html
+      url:  /compliance/privacy/gdpr.html
+      versionless: true
 
-        - label: Magento 1.x
-          url:  /architecture/gdpr/magento-1x.html
+          

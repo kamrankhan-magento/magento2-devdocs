@@ -3229,8 +3229,7 @@ entries:
   versions: 2.1.x
   type: New topic
   date: May 02 2018
-- description: "[Magento 2.x GDPR compliance](https://devdocs.magento.com/guides/v2.2/architecture/gdpr/magento-2x.html)<br/>[Magento
-    1.x GDPR compliance](https://devdocs.magento.com/guides/v2.2/architecture/gdpr/magento-1x.html)"
+- description: "[Magento GDPR compliance](https://devdocs.magento.com/compliance/privacy/gdpr.html)"
   versions: 2.x
   type: New topic
   date: May 01 2018
