@@ -20,6 +20,6 @@ Attribute |  Data Type | Description
 `taxvat` | String | The customer's Tax/VAT number (for corporate customers)
 `wishlist` | Wishlist! | Contains the contents of the customer's wish lists
 
-{% include graphql/customer-address-output.md %}
+{% include graphql/customer-address-output-24.md %}
 
 {% include graphql/customer-orders-output.md %}

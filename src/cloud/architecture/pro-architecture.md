@@ -21,7 +21,7 @@ The following table summarizes the differences between environments:
 <table>
   <tbody>
     <tr>
-      <td class="blank" />
+      <td class="blank"></td>
       <th>Integration</th>
       <th>Staging</th>
       <th>Production</th>
@@ -56,24 +56,20 @@ The following table summarizes the differences between environments:
       <td>Yes</td>
       <td>Yes</td>
     </tr>
-   <tr>
-     <td>Includes Blackfire.io</td>
-     <td>Yes</td>
-     <td>Yes</td>
-     <td>Yes</td>
-   </tr>
-   <tr>
+    <tr>
      <td>Includes New Relic</td>
      <td>No</td>
      <td>APM</td>
-     <td>APM + NRI</td>
+     <td>APM &plus; NRI</td>
    </tr>
   </tbody>
 </table>
 
+## Pro environment architecture
+
 Your project is a single Git repository with three, main environment branches for Integration, Staging, and Production. The following diagram shows the hierarchical relationship of the environments:
 
-![High-level view of Pro Environment architecture]({{ site.baseurl }}/common/images/cloud_pro-branch-architecture-wings.png)
+![High-level view of Pro Environment architecture]({{ site.baseurl }}/common/images/cloud/cloud_pro-branch-architecture.png)
 
 ## Integration environment {#cloud-arch-int}
 
@@ -97,7 +93,7 @@ Do **not** create a branch from Global Master. Use the Integration environment b
 
 ## Staging environment {#cloud-arch-stage}
 
-The Staging environment provides a near-production environment to test your site. This environment includes all services, such as Fastly CDN, New Relic APM, Blackfire Profiler, and search—and shares the same dedicated IaaS hardware as the Production environment.
+The Staging environment provides a near-production environment to test your site. This environment, which is hosted on dedicated IaaS hardware, includes all services, such as Fastly CDN, New Relic APM, and search.
 
 You cannot create a branch from the Staging environment branch. You must push code changes from the Integration environment branch to the Staging environment branch.
 
@@ -125,7 +121,7 @@ The three gateways map to the three servers in your Production environment clust
 
 ### Backup and disaster recovery
 
-Your Pro plan backup and recovery approach uses a high-availability architecture combined with full-system backups. We replicate each Project—all data, code, and assets—across three separate AWS Availability Zones, each zone with a separate data center.
+Your Pro plan backup and recovery approach uses a high-availability architecture combined with full-system backups. We replicate each Project—all data, code, and assets—across three separate AWS or Azure Availability Zones, each zone with a separate data center.
 
 In addition to the redundancy of the high-availability architecture, {{site.data.var.ece}} provides
 incremental backups, which include the file system and the database, every hour for the last 24 hours of operation. After the
@@ -161,7 +157,7 @@ The Production environment has three virtual machines (VMs) behind an Elastic Lo
 
 The following figure shows the technologies used in the Production environment:
 
-![Production technology stack]({{ site.baseurl }}/common/images/cloud_stack-diagram.png)
+![Production technology stack]({{ site.baseurl }}/common/images/cloud/cloud_stack-diagram.png)
 
 ### Pro cluster scaling
 

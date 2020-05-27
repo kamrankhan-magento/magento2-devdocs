@@ -8,7 +8,7 @@ functional_areas:
 
 Configuration management exports your configurations to a file for pushing across your environments. This file, `config.php`, keeps your configurations consistent across all environments, decreases downtime by moving static deploy to build, and much more. This information details an example for configuring your settings, exporting the file, and deploying it.
 
-This example shows how to use the [recommended procedure]({{ site.baseurl }}/cloud/live/sens-data-over.html#cloud-config-specific-recomm) for managing the configuration:
+This example shows how to use the [recommended procedure]({{ site.baseurl }}/cloud/live/sens-data-over.html) for managing the configuration:
 
 1. Enter your configurations in your Integration environment Admin panel.
 1. Create `config.php` and transfer it to your local system.
@@ -45,7 +45,7 @@ To complete these configuration management tasks, you need the following:
 
 ## Configure Magento through the Integration Admin panel {#configure}
 
-Log into the Magento Admin panel in Integration to modify configurations. For a list of settings, see [List of system-specific configuration settings]({{ site.baseurl }}/cloud/live/sens-data-over.html#cloud-clp-settings) for details.
+In the Integration environment, you can log in to the Magento Admin panel to modify system configuration settings for stores, websites, modules or extensions, static file optimization, and system values related to static content deployment. See [Configuration data]({{ site.baseurl }}/cloud/live/sens-data-over.html#configuration-data).
 
 To change locale and static file optimization settings:
 
@@ -54,7 +54,7 @@ To change locale and static file optimization settings:
 1. In the right pane, expand **Locale Options**.
 1. From the **Locale** list, change the locale. You can change it back later.
 
-   ![Change the locale]({{ site.baseurl }}/common/images/cloud_var_locale.png){:width="400px"}
+   ![Change the locale]({{ site.baseurl }}/common/images/cloud/cloud_var_locale.png){:width="400px"}
 
 1. Click **Save Config**.
 1. In the left navigation pane, click **Advanced** > **Developer**.
@@ -65,7 +65,7 @@ To change locale and static file optimization settings:
 1. From the **Merge CSS Files** list, click **No**.
 1. From the **Minify CSS Files** list, click **No**.
 
-   ![Set static file optimization settings]({{ site.baseurl }}/common/images/cloud_vars_set-minify.png){:width="550px"}
+   ![Set static file optimization settings]({{ site.baseurl }}/common/images/cloud/cloud_vars_set-minify.png){:width="550px"}
 
 1. Click **Save Config**.
 1. If prompted, [flush the Magento cache](http://docs.magento.com/m2/ee/user_guide/system/cache-management.html).
@@ -75,7 +75,7 @@ To change locale and static file optimization settings:
 
 This step creates and transfers the `config.php` configuration file on the Integration environment using a command you run on your local machine.
 
-This procedure corresponds to step 2 in the [recommended procedure]({{ site.baseurl }}/cloud/live/sens-data-over.html#cloud-config-specific-recomm). After you create `config.php`, transfer it to your local system so you can add it to Git.
+This procedure corresponds to step 2 in the [recommended procedure]({{ site.baseurl }}/cloud/live/sens-data-over.html). After you create `config.php`, transfer it to your local system so you can add it to Git.
 
 To create and transfer `config.php`:
 
@@ -136,7 +136,7 @@ The following snippet from `config.php` shows an example of changing the default
 
 ## Push and deploy config.php to environments {#deploy}
 
-Now that you've created `config.php` and transferred it to your local system, commit it to Git and push it to your environments. This procedure corresponds to step 3 and 4 in the [recommended procedure]({{ site.baseurl }}/cloud/live/sens-data-over.html#cloud-config-specific-recomm).
+Now that you've created `config.php` and transferred it to your local system, commit it to Git and push it to your environments. This procedure corresponds to step 3 and 4 in the [recommended procedure]({{ site.baseurl }}/cloud/live/sens-data-over.html).
 
 The following command adds, commits, and pushes to master:
 
@@ -161,14 +161,14 @@ To verify your configuration changes:
 
    Notice several fields cannot be edited, as shown in the following sample. These configuration settings are maintained by `config.php`.
 
-   ![Can't edit certain values in the Admin]({{ site.baseurl }}/common/images/cloud_var_not-editable.png){:width="550px"}
+   ![Can't edit certain values in the Admin]({{ site.baseurl }}/common/images/cloud/cloud_var_not-editable.png){:width="550px"}
 
 1. In the left navigation pane, click Advanced > **Developer**.
 1. In the right pane, expand **Template Settings**, **JavaScript Settings**, and **CSS Settings**.
 
    Notice several fields cannot be edited, as shown in the following sample. These configuration settings are maintained by `config.php`.
 
-   ![Can't edit certain values in the Admin ]({{ site.baseurl }}/common/images/cloud_var_not-editable2.png){:width="550px"}
+   ![Can't edit certain values in the Admin ]({{ site.baseurl }}/common/images/cloud/cloud_var_not-editable2.png){:width="550px"}
 
 1. Log out of the Magento Admin.
 
@@ -178,7 +178,7 @@ If you need to modify any of these settings and update `config.php`, you will ne
 
 To add new configurations, modify your Integration environment and run the command again to generate the file. Any new configurations are appended to the code in the file. Push it to Git following the previous steps.
 
-For an overview, see the [recommended procedure]({{ site.baseurl }}/cloud/live/sens-data-over.html#cloud-config-specific-recomm).
+For an overview, see the [recommended procedure]({{ site.baseurl }}/cloud/live/sens-data-over.html).
 
 For this example, we'll modify static file optimization settings and add a new setting for JavaScript.
 

@@ -159,9 +159,11 @@ To check Elasticsearch software compatibility:
 
    If the versions are incompatible, make one of the following updates to your environment configuration:
 
-   -  Change the Elasticsearch service version in the `services.yaml` file to a version that is compatible with the Elasticsearch PHP client. On Pro Staging and Production environments, you must submit a support ticket to change the Elasticsearch service version.
-
    -  [Change the Elasticsearch PHP client]({{ site.baseurl }}/guides/v2.3/config-guide/elasticsearch/es-downgrade.html) to a version that is compatible with the Elasticsearch service version.
+
+   -  Change the Elasticsearch service version in the `services.yaml` file to a version that is compatible with the Elasticsearch PHP client.
+
+      {%include /cloud/note-pro-using-yaml-support.md%}
 
 ## Restart the Elasticsearch service
 
@@ -171,13 +173,11 @@ If you need to restart the [Elasticsearch](https://www.elastic.co) service, you 
 
 -  By default, the search configuration for Cloud environments regenerates each time you deploy. You can use the `SEARCH_CONFIGURATION` deploy variable to retain custom search settings between deployments. See [Deploy variables]({{ site.baseurl }}/cloud/env/variables-deploy.html#search_configuration).
 
--  {{ site.data.var.ece }} projects provisioned with a shared Production and Staging environment use a single Elasticsearch instance, so you must specify a unique _Elasticsearch Index prefix_ for each of these environments. See [Configure Magento to use Elasticsearch]({{ site.baseurl}}/guides/v2.3/config-guide/elasticsearch/configure-magento.html) in the _Configuration Guide_.
-
 -  After you set up the Elasticsearch service for your project, use the Magento Admin UI to test the Elasticsearch connection and customize Elasticsearch settings for {{ site.data.var.ee }}.
 
 ### Elasticsearch plugins
 
-Optionally, you can add Elasticsearch plugins by adding the `configuration:plugins` section to the `.magento/services.yaml` file. For example, the following code enables the ICU analysis plugin and Python script support plugins.
+Optionally, you can add Elasticsearch plugins by adding the `configuration:plugins` section to the `.magento/services.yaml` file. For example, the following code enables the ICU analysis and Phonetic analysis plugins.
 
 ```yaml
 elasticsearch:
@@ -186,7 +186,7 @@ elasticsearch:
     configuration:
         plugins:
             - analysis-icu
-            - lang-python
+            - analysis-phonetic
 ```
 
 If you use the ElasticSuite third-party plugin, you must [update the `{{site.data.var.ct}}` package]({{ site.baseurl }}/cloud/project/ece-tools-update.html) to version 2002.0.19 or later.

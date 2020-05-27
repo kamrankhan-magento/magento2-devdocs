@@ -7,6 +7,9 @@ functional_areas:
   - Setup
 ---
 
+{:.bs-callout-info}
+All of the requirements described here apply to the latest patch release of Magento 2.3.
+
 ## Operating systems (Linux x86-64)
 
 Linux distributions, such as RedHat Enterprise Linux (RHEL), CentOS, Ubuntu, Debian, and similar.
@@ -56,6 +59,9 @@ Magento recommends using PHP 7.3
 {:.bs-callout-info}
 The [PHP installation instructions][] include a step for installing these extensions.
 
+{:.bs-callout-warning}
+If you install Magento via cloning from the [github](https://github.com/magento/magento2) repository then make sure you have the [ext-sockets](https://github.com/php-amqplib/php-amqplib/blob/master/CHANGELOG.md#281---2018-11-13) installed on your instance.
+
 <!--{% assign platform-req = site.data.codebase.v2_3.open-source.composer_lock.platform %}-->
 {% include install/php-extensions-template.md %}
 
@@ -102,7 +108,7 @@ Mail Transfer Agent (MTA) or an SMTP server
 ## Technologies Magento can use
 
 *  [Redis][] versions 3.2, 4.0, 5.0 (compatible with 2.4+) for page caching and session storage. Version 5.0 is highly recommended.
-*  [Varnish]({{page.baseurl}}/config-guide/varnish/config-varnish.html) version 4.x, 5.2 or 6.2
+*  [Varnish]({{page.baseurl}}/config-guide/varnish/config-varnish.html) version 6.x (tested with 6.3.1)
 *  [Elasticsearch]({{page.baseurl}}/config-guide/elasticsearch/es-overview.html)
 
    {{site.data.var.ee}} version 2.3.x supports the following Elasticsearch versions:

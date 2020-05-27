@@ -16,6 +16,28 @@ The `{{site.data.var.mcp}}` package uses the following version sequence: `<major
 {:.bs-callout-info}
 See [Apply patches]({{site.baseurl}}/cloud/project/project-patch.html) to learn how to apply Magento patches and hot fixes to your {{site.data.var.ece}} project.
 
+## v1.0.4
+*Release date: May 12, 2020*<br/>
+
+-  **Amazon Pay checkout**—Fixes an issue with the Amazon Pay payment widget that prevented customers from changing the payment method on the _Review & Payments_ step during the checkout process.<!--MCLOUD-5930-->
+
+-  **Product display on Category page**—Fixes an issue that prevented products from displaying on the category page in _Show all pages_ view.<!--MCLOUD-5684-->
+
+-  **Page Builder image upload**—Fixes a Page Builder interface issue that sometimes caused the following error when uploading images to the image gallery: `Destination folder is not writable or does not exist`<!--MCLOUD-5837-->
+
+-  **Suppress unnecessary sitemap generation warnings**—Adds a retry attempt when errors occur during sitemap generation and skips customer email notification in cases where errors can be recovered automatically.<!--MCLOUD-3025-->
+
+-  **Site performance improvement**—Fixes a performance issue with the `Magento\Framework\App\DeploymentConfig\Reader::load` function, which periodically experienced long load times that affected site performance. <!--MCLOUD-5650-->
+
+-  Updated patch assignment for payment method patches to target the payment modules instead of the Magento base package (magento/magento2-base) so that the payment patches are applied only if the payment modules exist.<!--MCLOUD-5666-->
+
+-  Updated patches for compatibility with Magento {{site.data.var.ce}}.<!--MCLOUD-5701-->
+
+## v1.0.3
+*Release date: April 28, 2020*<br/>
+
+-  Added fix for the "FPC is getting disabled during deployments" patch to support Magento 2.3.5.
+
 ## v1.0.2
 *Release date: February 27, 2020*<br/>
 
@@ -29,7 +51,7 @@ This release includes the following patches and critical fixes:
 
 -  **PayPal Express Checkout**-Published on February 12, 2020, this patch resolves an issue that affects orders placed with PayPal Express Checkout where the shipping address for the order specifies a country region that has been manually entered into the text field rather than selected from the drop-down menu on the Shipping page. See the complete patch description on the [patch download page](https://magento.com/tech-resources/download#download2353).
 
--  **Magento deployment**–Added a patch to fix an issue that disabled the full page cache during the Magento deployment process. This patch applies to Magento 2.3.2 and later releases.
+-  **Magento deployment fix**–Added a patch to fix an issue that disabled the full page cache during the Magento deployment process. This patch applies to Magento 2.3.2 and later releases.
 
 -  **Scope parameter for Async/Bulk API**-Updated this patch to fix a syntax error in the `composer.json` file. This patch applies to {{site.data.var.ce}} 2.3.1 and 2.3.2. See the complete patch description on the [patch download page](https://magento.com/tech-resources/download#download2312).
 

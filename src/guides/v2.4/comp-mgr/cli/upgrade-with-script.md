@@ -1,1 +1,0 @@
-../../../v2.3/comp-mgr/cli/upgrade-with-script.md

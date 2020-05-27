@@ -3,7 +3,7 @@ group: graphql
 title: customer query
 ---
 
-The `customer` query returns information about the logged-in customer and store credit history.
+The `customer` query returns information about the logged-in customer, store credit history, and customer's wishlist.
 
 To return or modify information about a customer, Magento recommends you use customer tokens in the header of your GraphQL calls. However, you also can use [session authentication]({{ page.baseurl }}/get-started/authentication/gs-authentication-session.html).
 
@@ -508,7 +508,7 @@ Attribute | Data type | Description
 `sharing_code` | String | An encrypted code that Magento uses to link to the wish list
 `updated_at` | String | The time of the last modification to the wish list
 
-#### WishlistItem attributes {#wishlistitem}
+### WishlistItem attributes {#wishlistitem}
 
 Attribute | Data type | Description
 --- | --- | ---
@@ -528,7 +528,7 @@ Attribute |  Data Type | Description
 --- | --- | ---
 `store_credit` | [CustomerStoreCredit](#CustomerStoreCredit) | Contains the store credit information for the logged-in customer
 
-#### CustomerStoreCredit attributes {#CustomerStoreCredit}
+### CustomerStoreCredit attributes {#CustomerStoreCredit}
 
 The `store_credit` object contains store credit information, including the balance and history.
 
@@ -538,7 +538,7 @@ Attribute |  Data Type | Description
 `current_balance` | Money | The current store credit balance
 `enabled` | Boolean | Indicates whether store credits are enabled. If the feature is disabled, then the balance will not be returned
 
-#### CustomerStoreCreditHistory attributes {#CustomerStoreCreditHistory}
+### CustomerStoreCreditHistory attributes {#CustomerStoreCreditHistory}
 
 The `CustomerStoreCreditHistory` object contains an array of store credit items and paging information. If the store credit or store credit history feature is disabled, then a null value will be returned.
 
@@ -548,7 +548,7 @@ Attribute |  Data Type | Description
 `page_info` | SearchResultPageInfo | An object that includes the `page_size` and `current_page` values specified in the query
 `total_count` | Int | The number of items returned
 
-#### CustomerStoreCreditHistoryItem attributes {#CustomerStoreCreditHistoryItem}
+### CustomerStoreCreditHistoryItem attributes {#CustomerStoreCreditHistoryItem}
 
 The `CustomerStoreCreditHistoryItem` object contains information about a specific change to the customer's store credit.
 
